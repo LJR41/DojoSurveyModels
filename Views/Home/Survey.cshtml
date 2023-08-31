@@ -1,0 +1,38 @@
+@{
+    ViewData["Survey"] = "Dojo Survey";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div>
+        <form action="/survey/create" method="post">
+            <label for="Name">Your Name:</label>
+            <input type="text" placeholder="I am..." name="Name">
+            <label for="Location">Dojo Location</label>
+            <select name="Location" id="">
+                <option value="" hidden>Select A City</option>
+                <option value="San Jose">San Jose</option>
+                <option value="Seattle">Seattle</option>
+                <option value="Miami">Miami</option>
+            </select>
+            <label for="Langauge">Favorite Language:</label>
+            <select name="Language" id="">
+                <option value=""hidden>Select a Programming Language</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="C#">C#</option>
+            </select>
+            <label for="Comment">Comment(optional)</label>
+            <textarea name="Comment" id="" cols="30" rows="10" placeholder="Enter comment here..."></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
